@@ -68,7 +68,7 @@ func calculateMatchPercentage(keywordCount, totalKeywords int) float64 {
 }
 
 func main() {
-	// Print the current working directory for debugging
+	
 	dir, err := os.Getwd()
 	if err != nil {
 		fmt.Println("Error getting current working directory:", err)
@@ -76,25 +76,25 @@ func main() {
 	}
 	fmt.Println("Current working directory:", dir)
 
-	// File paths for job description and resume
+	
 	jobDescriptionFile := "jobdescription.txt"
 	resumeFile := "resume.txt"
 
-	// Read the job description
+	
 	jobDescription, err := readFile(jobDescriptionFile)
 	if err != nil {
 		fmt.Println("Error reading job description:", err)
 		return
 	}
 
-	// Read the resume
+	
 	resume, err := readFile(resumeFile)
 	if err != nil {
 		fmt.Println("Error reading resume:", err)
 		return
 	}
 
-	// Extract keywords from the job description
+	
 	keywords := extractKeywords(jobDescription)
 
 	// Match keywords in the resume
